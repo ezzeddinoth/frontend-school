@@ -1,0 +1,125 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(25, 35, 30, 0.55);
+  backdrop-filter: blur(4px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  z-index: 1000;
+}
+
+.popup {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px 30px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+  animation: popupAppear 0.2s ease-out;
+}
+
+@keyframes popupAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.iconContainer {
+  width: 65px;
+  height: 65px;
+  background: #fff1ef;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+  font-size: 28px;
+}
+
+.popup h2 {
+  color: #263b35;
+  font-size: 23px;
+  margin: 0 0 12px;
+}
+
+.popup p {
+  color: #77736b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.popup p strong {
+  color: #263b35;
+}
+
+.popup small {
+  display: block;
+  color: #c45145;
+  font-size: 12px;
+  margin-bottom: 28px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.cancelButton,
+.deleteButton {
+  flex: 1;
+  padding: 13px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cancelButton {
+  background: #f1eee7;
+  color: #263b35;
+  border: 1px solid #e1dbce;
+}
+
+.cancelButton:hover {
+  background: #e5dfd2;
+}
+
+.deleteButton {
+  background: #c45145;
+  color: #ffffff;
+  border: none;
+}
+
+.deleteButton:hover {
+  background: #a93e34;
+}
+
+.cancelButton:focus-visible,
+.deleteButton:focus-visible {
+  outline: 3px solid #b58b55;
+  outline-offset: 3px;
+}
+
+@media (max-width: 400px) {
+  .popup {
+    padding: 28px 20px;
+  }
+}

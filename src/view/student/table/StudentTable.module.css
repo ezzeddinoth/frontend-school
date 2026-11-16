@@ -1,0 +1,195 @@
+/* Table container */
+
+.tableContainer {
+  background: white;
+  border-radius: 16px;
+  padding: 10px;
+  overflow-x: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e9e5dc;
+}
+
+/* Table */
+
+.studentTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.studentTable thead {
+  background: #f5f3ef;
+}
+
+.studentTable th {
+  color: #263b35;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 18px 20px;
+}
+
+.studentTable td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #eeeae3;
+  color: #555;
+  font-size: 14px;
+}
+
+.studentTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.studentTable tbody tr:hover {
+  background: #faf9f6;
+}
+
+/* Student information */
+
+.studentId {
+  color: #b58b55 !important;
+  font-weight: 700;
+}
+
+.studentName {
+  color: #263b35 !important;
+  font-weight: 600;
+}
+
+/* Action buttons */
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.editButton,
+.deleteButton {
+  padding: 8px 15px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.editButton {
+  background: #f1eee7;
+  color: #263b35;
+  border: 1px solid #e1dbce;
+}
+
+.editButton:hover {
+  background: #e5dfd2;
+}
+
+.deleteButton {
+  background: #fff1ef;
+  color: #c45145;
+  border: 1px solid #f3d5d0;
+}
+
+.deleteButton:hover {
+  background: #ffe1dc;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .studentPage {
+    padding: 30px 15px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .createButton {
+    width: 100%;
+  }
+
+  .tableContainer {
+    padding: 5px;
+  }
+
+  .studentTable th,
+  .studentTable td {
+    padding: 14px 10px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Selected row */
+
+.studentTable tbody tr {
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.studentTable tbody tr.selectedRow {
+  background: #e5eee8;
+  box-shadow: inset 4px 0 0 #263b35;
+}
+
+.studentTable tbody tr.selectedRow td {
+  color: #263b35;
+}
+
+.studentTable tbody tr.selectedRow:hover {
+  background: #dce9e0;
+}
+
+/* Subscriptions column */
+
+.subscriptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 280px;
+}
+
+.subscriptionBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 7px;
+  background: #f1eee7;
+  border: 1px solid #e1dbce;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.subscriptionDay {
+  color: #263b35;
+  font-weight: 700;
+}
+
+.subscriptionMenu {
+  color: #b58b55;
+  font-weight: 600;
+}
+
+.noSubscription {
+  color: #999;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Responsive subscriptions */
+
+@media (max-width: 600px) {
+  .subscriptions {
+    max-width: 180px;
+    gap: 5px;
+  }
+
+  .subscriptionBadge {
+    padding: 5px 7px;
+    font-size: 11px;
+  }
+}

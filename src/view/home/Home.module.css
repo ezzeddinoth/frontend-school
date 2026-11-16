@@ -1,0 +1,141 @@
+.home {
+  min-height: 100vh;
+  width: 100%;
+  background: #f5f3ef;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  color: #263b35;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  letter-spacing: -1px;
+}
+
+.header p {
+  color: #77736b;
+  font-size: 15px;
+  margin: 0;
+}
+
+.buttons {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button {
+  width: 100%;
+  min-height: 125px;
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  text-align: left;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.button:focus-visible {
+  outline: 3px solid #263b35;
+  outline-offset: 4px;
+}
+
+.student {
+  background: #263b35;
+  color: white;
+}
+
+.menu {
+  background: #ffffff;
+  color: #263b35;
+  border: 1px solid #ddd8ce;
+}
+
+.subscribe {
+  background: #b58b55;
+  color: white;
+}
+
+.icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.buttonContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.buttonContent strong {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.buttonContent small {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.arrow {
+  font-size: 26px;
+  transition: transform 0.25s ease;
+}
+
+.button:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .buttons {
+    gap: 15px;
+  }
+
+  .button {
+    min-height: 110px;
+    padding: 20px;
+  }
+
+  .buttonContent strong {
+    font-size: 20px;
+  }
+
+  .buttonContent small {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,124 @@
+/* Table container */
+
+.tableContainer {
+  background: white;
+  border-radius: 16px;
+  padding: 10px;
+  overflow-x: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e9e5dc;
+}
+
+/* Table */
+
+.menuTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.menuTable thead {
+  background: #f5f3ef;
+}
+
+.menuTable th {
+  color: #263b35;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 18px 20px;
+}
+
+.menuTable td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #eeeae3;
+  color: #555;
+  font-size: 14px;
+}
+
+.menuTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.menuTable tbody tr:hover {
+  background: #faf9f6;
+}
+
+/* Menu information */
+
+.menuId {
+  color: #b58b55 !important;
+  font-weight: 700;
+}
+
+.menuName {
+  color: #263b35 !important;
+  font-weight: 600;
+}
+
+/* Action buttons */
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.editButton,
+.deleteButton {
+  padding: 8px 15px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.editButton {
+  background: #f1eee7;
+  color: #263b35;
+  border: 1px solid #e1dbce;
+}
+
+.editButton:hover {
+  background: #e5dfd2;
+}
+
+.deleteButton {
+  background: #fff1ef;
+  color: #c45145;
+  border: 1px solid #f3d5d0;
+}
+
+.deleteButton:hover {
+  background: #ffe1dc;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .menuPage {
+    padding: 30px 15px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .createButton {
+    width: 100%;
+  }
+
+  .tableContainer {
+    padding: 5px;
+  }
+
+  .menuTable th,
+  .menuTable td {
+    padding: 14px 10px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
