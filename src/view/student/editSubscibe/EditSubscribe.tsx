@@ -1,7 +1,6 @@
 import { useState } from "react";
 import type { ChangeEvent } from "react";
 import styles from "./EditSubscribe.module.css";
-import type { ISubscription } from "../../../api/dto/student";
 
 interface EditSubscribeProps {
   editSubscribes: IEditSubscribe[]
